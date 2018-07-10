@@ -15,17 +15,17 @@ const addChar = (c, n ) => {
 
 // code start here
 const my_put_nbr = (x) => {
-    // si x est negatif, on met '-' et on le repasse positif
+    // if x is neg
     if ( x < 0) {
         myPutChar(45);
         x = -x;
     }
-    // si x est un seul chiffre
+    // if x is one number
     var a = Math.floor(x) % 10 + 48;
     if (a != 48 && x < 10) {
         myPutChar(a);
     }
-    // si x n'est pas un chiffre, on se décale
+    // if x is more than one number
     if (x  > 9) {
         my_put_nbr(x / 10 );
         myPutChar(a);
